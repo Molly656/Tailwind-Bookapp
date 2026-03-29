@@ -1,4 +1,3 @@
-
 // src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Context/AuthProvider.tsx";
@@ -8,21 +7,18 @@ import HomePage from "./Pages/Homepage.tsx";
 import BookReader from "./Components/BookReader.tsx";
 import NotFound from "./Pages/NotFound.tsx";
 import HelpCenter from "./Pages/HelpCenter.tsx";
-import BookSearch  from "./Components/BookSearch.tsx";
+import BookSearch from "./Components/BookSearch.tsx";
 import { ThemeProvider } from "./Context/ThemeProvider.tsx";
-import "./index.css"
+import "./index.css";
 
 const App = () => {
-
-
   return (
-
     <AuthProvider>
       <ThemeProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomePage />} />
-            <Route path="/dashboard/*" element={<HomePage/>} />
+            <Route path="/dashboard/*" element={<HomePage />} />
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/search" element={<BookSearch />} />
             <Route path="/book/:bookKey" element={<BookReader />} />
