@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Context/AuthProvider.tsx";
 import WelcomePage from "./Pages/WelcomePage.tsx";
 import UserSettings from "./Components/UserSettings.tsx";
-import HomePage from "./Pages/Homepage.tsx";
+import Homepage from "./Pages/Homepage.tsx";
 import BookReader from "./Components/BookReader.tsx";
 import NotFound from "./Pages/NotFound.tsx";
 import HelpCenter from "./Pages/HelpCenter.tsx";
@@ -18,7 +18,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomePage />} />
-            <Route path="/dashboard/*" element={<HomePage />} />
+            <Route path="/dashboard/*" element={<Homepage />} />
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/search" element={<BookSearch />} />
             <Route path="/book/:bookKey" element={<BookReader />} />

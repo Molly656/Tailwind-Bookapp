@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Book } from "lucide-react";
 import { useAuth } from "../Context/AuthProvider.tsx";
 import AuthModal from "../Components/AuthModal";
-import HomePage from "./Homepage.tsx";
+import Homepage from "./Homepage.tsx";
 
 const WelcomePage = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);
@@ -15,7 +15,7 @@ const WelcomePage = () => {
   };
 
   if (user) {
-    return <HomePage />;
+    return <Homepage />;
   }
 
   return (
