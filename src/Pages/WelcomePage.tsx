@@ -46,7 +46,7 @@ const WelcomePage = () => {
             <Book className="w-10 h-10 text-purple-300" />
             <h1 className="text-2xl font-bold text-purple-100">BookHaven</h1>
           </div>
-          <div className="flex gap-4">
+          <div className="hidden md:flex gap-4">
             <button
               onClick={() => handleAuthClick("login")}
               className="px-6 py-2 border border-purple-300 text-purple-100 rounded-lg bg-transparent transition-all duration-200 font-medium hover:bg-purple-700 hover:text-white"
