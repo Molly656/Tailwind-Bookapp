@@ -6,9 +6,11 @@ import UserProfile from "../Components/Userprofile";
 import UserSettings from "../Components/UserSettings";
 import BookSearch from "../Components/BookSearch";
 
-const HomePage: React.FC = () => {
+const Homepage: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [currentView, setCurrentView] = useState<"home" | "profile" | "settings">("home");
+  const [currentView, setCurrentView] = useState<
+    "home" | "profile" | "settings"
+  >("home");
   const renderContent = () => {
     switch (currentView) {
       case "profile":
@@ -30,7 +32,8 @@ const HomePage: React.FC = () => {
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="text-purple-600 cursor-pointer p-2 rounded hover:bg-purple-50"
-              aria-label="Toggle sidebar">
+              aria-label="Toggle sidebar"
+            >
               <Menu className="w-8 h-8" />
             </button>
             <Book className="w-10 h-10 text-purple-600" />
@@ -39,14 +42,16 @@ const HomePage: React.FC = () => {
 
           {/* Right-aligned items*/}
           <nav className="hidden md:flex">
-          
             <Link
               to="/help-center"
               className="text-purple-600 no-underline px-4 py-2 hover:text-purple-800 hover:bg-purple-50"
             >
               Help Center
             </Link>
-            <Link to="/how-to-download" className="text-purple-600 no-underline px-4 py-2 hover:text-purple-800 hover:bg-purple-50" >
+            <Link
+              to="/how-to-download"
+              className="text-purple-600 no-underline px-4 py-2 hover:text-purple-800 hover:bg-purple-50"
+            >
               How to Download
             </Link>
           </nav>
@@ -78,4 +83,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Homepage;
